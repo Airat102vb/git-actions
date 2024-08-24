@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: first step
-        run: echo "${{ github.events.input.name }}"
+        run: echo "${{ github.event.inputs.name }}"
   
