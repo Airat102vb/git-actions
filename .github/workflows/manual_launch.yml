@@ -1,0 +1,15 @@
+name: test_manual_launch_with_params
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Any input parameter"
+        default: "Day"
+
+jobs:
+  launch_with_param:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: echo "${{ github.events.input.name }}"
+  
